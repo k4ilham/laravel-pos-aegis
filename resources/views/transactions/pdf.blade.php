@@ -11,13 +11,13 @@
                 <h2 class="text-center">{{ config('store.name') }}</h2>
                 <p class="text-center">{{ config('store.address') }} | Telp: {{ config('store.phone') }}</p>
                 <br>
-                <table style="width:300px;margin: auto;">
+                <table class="main-table">
                     <tbody>
                         <tr>
-                            <td style="width:90px">{{ trans('transaction.invoice_no') }}</td>
+                            <td>{{ trans('transaction.invoice_no') }}</td>
                             <td>:</td>
-                            <td class="strong">{{ $transaction->invoice_no }}</td>
-                            <td class="text-right">{{ $transaction->created_at->format('d/m/Y') }}</td>
+                            <td>{{ $transaction->invoice_no }}</td>
+                            <td>{{ $transaction->created_at->format('d/m/Y') }}</td>
                         </tr>
                         <tr><td>{{ trans('transaction.cashier') }}</td><td>:</td><td>{{ $transaction->user->name }}</td><td class="text-right">{{ $transaction->created_at->format('H:i:s') }}</td></tr>
                         <tr><td>{{ trans('transaction.customer') }}</td><td>:</td><td colspan="2">{{ $transaction->customer['name'] }}</td></tr>
